@@ -28,12 +28,14 @@ const Home = () => {
 
   return (
     <>
-      <h1>this is the home page</h1>
-      {/* You can map through pokemonList to render Pokemon details */}
-      <section class="pokedex">
-        {pokemonList.map((pokemon) => (
-          <PokeCard {...pokemon} key={pokemon.name} />
-        ))}
+      <section className="home">
+        <h1 id="section">Pokédex</h1>
+        {/* You can map through pokemonList to render Pokemon details */}
+        <section className="pokedex">
+          {pokemonList.map((pokemon) => (
+            <PokeCard {...pokemon} key={pokemon.name} />
+          ))}
+        </section>
       </section>
     </>
   );

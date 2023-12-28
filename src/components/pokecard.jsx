@@ -1,17 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/pokecard.css";
 
-const PokeCard = (pokemon) => {
-  fetch(`${pokemon.url}`)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => console.error("Here is the error:", error));
+const PokeCard = ({ url }) => {
+  const [pokemonData, setPokemonData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setPokemonData(data);
+      } catch (error) {
+        console.error("Error fetching Pokemon data:", error);
+      }
+    };
+
+    fetchData();
+  }, [url]);
+
+  useEffect(() => {
+    pokemonData && console.log("Updated Pokemon List:", pokemonData);
+  }, [pokemonData]);
 
   return (
-    <div class="pokecard">
-      Pokemon: {pokemon.name} URL: {pokemon.url}
+    <div className="pokecard">
+      {pokemonData ? (
+        <>
+          <div className="span">
+            <span id="id">{pokemonData.id}</span>
+          </div>
+          <p>{pokemonData.name}</p>
+          <div className="pokeimg">
+            <img src={pokemonData.sprites.other.home.front_default} alt="" />
+          </div>
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };

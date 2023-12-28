@@ -1,0 +1,152 @@
+body {
+  background-color: rgba(194, 153, 20, 0.856);
+  background-color: rgba(20, 43, 7, 0.877);
+  /* background-color: #575803; */
+  /* background-color: #4b5339; */
+}
+
+.pokecard {
+  margin: auto;
+  display: flex;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid black;
+  /* box-shadow: 5px 5px rgb(12, 10, 15); */
+  box-shadow: 5px 5px rgb(15, 10, 11);
+  background-color: #70804c;
+  background-color: 575803;
+  /* background-color: rgba(97, 85, 47, 0.856); */
+  /* background-color: #453953; */
+  /* padding: 1rem 2rem; */
+  /* color: #dcd6f7; */
+  /* color: #a2a8d3; */
+}
+
+.span {
+  margin-left: auto;
+  padding-right: 20px;
+  max-height: 30px;
+}
+
+.id {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.pokeimg img {
+  min-width: 200px;
+  max-height: 200px;
+}
+
+::-webkit-scrollbar {
+  width: 0.35em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(20, 43, 7, 0);
+  /* background: rgb(161, 86, 102); */
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(161, 21%, 27%, 0.664);
+  /* border: .25em solid hsl(204, 49%, 38%); */
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(204, 20%, 60%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+  max-width: 300px;
+  height: 300px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay:hover {
+  background: rgba(49, 49, 49, 0.8);
+}
+
+#atc-button {
+  width: 100px;
+  height: 50px;
+  visibility: hidden;
+}
+
+#atw-btn {
+  top: 0px;
+  order: 1;
+  width: 96%;
+  margin-top: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: right;
+  visibility: hidden;
+  position: absolute;
+}
+
+.overlay:hover #atc-button,
+.overlay:hover #atw-btn {
+  visibility: visible;
+}
+
+.footer {
+  max-width: 300px;
+  padding: 5px 0 0 0;
+}
+#album {
+  margin: 0;
+}
+
+.album-info {
+  display: flex;
+}
+
+#price,
+#artist {
+  width: 50%;
+  margin: 0;
+}
+
+#price {
+  display: flex;
+  justify-content: flex-end;
+}

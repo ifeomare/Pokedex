@@ -1,0 +1,31 @@
+.home {
+  max-width: 100vw;
+  font-size: 20px;
+}
+
+.home #section {
+  font-size: 50px;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thick #222103b4;
+  -webkit-text-fill-color: rgba(142, 180, 131, 0.918);
+  /* -webkit-text-stroke: thick #003a70; */
+  /* -webkit-text-fill-color: #fceb05; */
+}
+
+.home .pokedex {
+  background-clip: text;
+  color: white;
+  /* background-image: linear-gradient(to right, #ff4e50, #f9d423); */
+  position: relative;
+  gap: 75px;
+  display: grid;
+}
+
+/*if the window is greater than 768px */
+@media screen and (min-width: 768px) {
+  .pokedex {
+    grid-template-columns: repeat(4, auto);
+    /* align-items: start -> each card is it's own length */
+  }
+}
